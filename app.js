@@ -104,7 +104,6 @@ function init() {
    // assign the value of the dropdown menu option to a variable
    var sampleID = dropdownMenu.property("value");
 
-
      // check to make sure sampleID is the correct value
    console.log(sampleID);
    // pull the data and update the charts based on the selected subject
@@ -145,8 +144,6 @@ function init() {
         size: bubbleValues
         };     
   
-
-
    // update the plots
     Plotly.restyle("bar", "x", [sample_values]);
     Plotly.restyle("bar", "y", [upstrOtuIds]);
