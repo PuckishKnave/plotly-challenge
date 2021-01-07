@@ -30,7 +30,6 @@ function init() {
             .append("p")
             .text("bbtype: "+metaData.bbtype)
             ;
-            // console.log(metaData);
 
         // initialize the plots    
         d3.json("samples.json").then((sample)=>{
