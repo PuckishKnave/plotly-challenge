@@ -8,7 +8,7 @@ d3.json('samples.json').then(BBdata => {
     var samples = BBdata.samples
 
 // adding IDs
-var message = ("Choose a Subject");
+var message = ("Choose a Sample");
 d3.select("#selDataset").append("option")
 .attr("value", message).html(message);
 
