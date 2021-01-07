@@ -92,3 +92,21 @@ Plotly.newPlot("bubble", bubbledata, bubblelayout)
 // event trigger
 dropdown.on("change", dropdownchange);
 });
+
+// populate demographic info box
+var selection = d3.select("#sample-metadata").selectAll("div")
+  .data(metadata);
+selection.enter()
+  .append("div")
+  .merge(selection)
+  .html(function(d){
+    return `<p>ID: ${d.id}</p>
+    <p>Ethnicity: ${d.ethnicity}</p>
+    <p>Gender: ${d.gender}</p>
+    <p>Age: ${d.age}</p>
+    <p>Location: ${d.location}</p>
+    <p>bbtype: ${d.bbtype}</p>
+    <p>wfreq: ${d.wfreq}</p>`
+});
+// Remove old data
+selection.exit().remove();
